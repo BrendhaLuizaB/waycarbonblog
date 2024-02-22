@@ -1,0 +1,27 @@
+
+<div>
+  <h1>Comentários</h1>
+  <div class="comment-container" *ngFor="let comment of comment">
+    <div class="user-comment" >
+      <p>{{comment.author.username}} - {{ comment.timestamp.formattedDate}}</p>
+    </div>
+    <!-- <div *ngFor="let comment of formattedComments">
+      <p>{{ comment.formattedTimestamp }} </p>
+    </div> -->
+    <div class="text-comments">
+      <p>
+        {{comment.content}}
+      </p>
+    </div>
+  </div>
+  
+  <!-- <div *ngFor="let comment of organizeComments">
+    <app-comment [comment]="comment"></app-comment>
+    <div *ngFor="let reply of comment.replies">
+       <app-comment [comment]="reply"></app-comment>
+    </div>
+ </div> -->
+  <div>
+    
+  </div>
+</div>

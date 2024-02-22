@@ -1,0 +1,19 @@
+div {
+    margin-top: 2rem;
+}
+
+.text-comments > p{
+    width: 38rem;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.user-comment > p{
+    color: #017DB5;
+}
+
+.comment-container {
+    border-left: solid 3px #FF9B52;
+    padding-left: 1rem;
+}
