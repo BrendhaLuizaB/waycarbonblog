@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { UserIconComponent } from '../../../waycarbon-ds/src/app/user-icon/user-icon.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @Component({
   selector: 'app-root',

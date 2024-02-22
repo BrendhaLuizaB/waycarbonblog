@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-user-icon',
@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './user-icon.component.css'
 })
 export class UserIconComponent {
-
+  @Input() username!: string;
+  @Input() id!: number;
+  @Input() image!: string;
+  @Input() memberSince!: string;
 }

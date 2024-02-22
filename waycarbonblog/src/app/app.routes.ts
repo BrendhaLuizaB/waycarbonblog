@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from '../../projects/waycarbon/src/app/home/home.component';
 import { UserIconComponent } from '../../projects/waycarbon-ds/src/app/user-icon/user-icon.component';
+import { HomeComponent } from '../../projects/waycarbon/src/app/pages/home/home.component';
 
 export const routes: Routes = [
    { path: "",

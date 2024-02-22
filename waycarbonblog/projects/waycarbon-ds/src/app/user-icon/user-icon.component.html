@@ -1,1 +1,13 @@
-<p>user-icon works!</p>
+<div>
+  <img
+    [src]="'/assets/avatar' + id + '.jpg'"
+    priority
+    width="50"
+    height="50"
+    loading="eager"
+  />
+  <div>
+    <p>{{username}}</p>
+    <p>{{memberSince}}</p>
+  </div>
+</div>
