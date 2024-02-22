@@ -4,10 +4,12 @@ import { UserIconComponent } from '../../../../../waycarbon-ds/src/app/user-icon
 import { default as usersData } from '../../../../../../src/assets/users';
 import { User } from '../../models/users.model';
 import { ComentsComponent } from '../coments/coments.component';
+import { LikeBTNComponent } from '../../../../../waycarbon-ds/src/app/like-btn/like-btn.component';
+import { ReportComponent } from '../../../../../waycarbon-ds/src/app/report/report.component';
 @Component({
   selector: 'app-main',
   standalone: true,
-  imports: [UserIconComponent, NgFor, NgIf, ComentsComponent],
+  imports: [UserIconComponent, NgFor, NgIf, ComentsComponent, LikeBTNComponent, ReportComponent],
   templateUrl: './main.component.html',
   styleUrl: './main.component.css',
 })

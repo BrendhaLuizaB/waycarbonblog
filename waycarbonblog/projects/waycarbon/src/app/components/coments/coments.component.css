@@ -17,3 +17,8 @@ div {
     border-left: solid 3px #FF9B52;
     padding-left: 1rem;
 }
+
+.components-container{
+    display: flex;
+    align-items: baseline;
+}

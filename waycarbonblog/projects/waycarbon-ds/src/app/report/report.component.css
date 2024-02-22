@@ -1,0 +1,8 @@
+div{
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+svg:hover{
+fill: #fe1616;
+}

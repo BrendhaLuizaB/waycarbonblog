@@ -1,7 +1,4 @@
 // date-utils.ts
-import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
-
 export function formatTimestamp(timestamp: string): string {
     const date = new Date(timestamp);
     const options: Intl.DateTimeFormatOptions = {
