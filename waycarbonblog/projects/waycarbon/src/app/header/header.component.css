@@ -1,0 +1,10 @@
+.tittle-header{
+    color: #fff;
+    font-weight: 600;
+}
+.container-tittle{
+    background-color: #03A9F4;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,286 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "waycarbonblog": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/waycarbonblog",
+            "index": "src/index.html",
+            "browser": "src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "waycarbonblog:build:production"
+            },
+            "development": {
+              "buildTarget": "waycarbonblog:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "waycarbonblog:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "waycarbon": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/waycarbon",
+      "sourceRoot": "projects/waycarbon/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/waycarbon",
+            "index": "projects/waycarbon/src/index.html",
+            "browser": "projects/waycarbon/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/waycarbon/tsconfig.app.json",
+            "assets": [
+              "projects/waycarbon/src/favicon.ico",
+              "projects/waycarbon/src/assets"
+            ],
+            "styles": [
+              "projects/waycarbon/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/waycarbon/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/waycarbon/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "waycarbon:build:production"
+            },
+            "development": {
+              "buildTarget": "waycarbon:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "waycarbon:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/waycarbon/tsconfig.spec.json",
+            "assets": [
+              "projects/waycarbon/src/favicon.ico",
+              "projects/waycarbon/src/assets"
+            ],
+            "styles": [
+              "projects/waycarbon/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "waycarbonDS": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/waycarbon-ds",
+      "sourceRoot": "projects/waycarbon-ds/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/waycarbon-ds",
+            "index": "projects/waycarbon-ds/src/index.html",
+            "browser": "projects/waycarbon-ds/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/waycarbon-ds/tsconfig.app.json",
+            "assets": [
+              "projects/waycarbon-ds/src/favicon.ico",
+              "projects/waycarbon-ds/src/assets"
+            ],
+            "styles": [
+              "projects/waycarbon-ds/src/styles.css"
+            ],
+            "scripts": [],
+            "server": "projects/waycarbon-ds/src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "projects/waycarbon-ds/server.ts"
+            }
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "waycarbonDS:build:production"
+            },
+            "development": {
+              "buildTarget": "waycarbonDS:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "waycarbonDS:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/waycarbon-ds/tsconfig.spec.json",
+            "assets": [
+              "projects/waycarbon-ds/src/favicon.ico",
+              "projects/waycarbon-ds/src/assets"
+            ],
+            "styles": [
+              "projects/waycarbon-ds/src/styles.css"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  }
+}

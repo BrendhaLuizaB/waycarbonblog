@@ -1,0 +1,21 @@
+.container-main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.container-main > div:first-child > p{
+    font-weight: 400;
+    color: #939393;
+}
+
+.container-text{
+    margin-top: 2rem;
+}
+
+.container-text > p{
+    color: black;
+    width: 38rem;
+}
