@@ -1,10 +1,9 @@
-import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-like-btn',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './like-btn.component.html',
   styleUrl: './like-btn.component.css'
 })

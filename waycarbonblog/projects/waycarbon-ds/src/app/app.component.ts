@@ -8,7 +8,7 @@ import { UsersCommentsComponent } from './users-comments/users-comments.componen
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserIconComponent, LikeBTNComponent, ReportComponent, UsersCommentsComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

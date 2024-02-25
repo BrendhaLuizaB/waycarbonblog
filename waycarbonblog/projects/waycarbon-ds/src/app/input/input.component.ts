@@ -8,8 +8,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-input',
   standalone: true,
-  imports: [UsersCommentsComponent, NgIf, CommonModule,
-    FormsModule],
+  imports: [UsersCommentsComponent, FormsModule, InputComponent],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
 })

@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './add-friend.component.html',
   styleUrl: './add-friend.component.css'
 })
-export class AddFriendComponent {
-
-}
+export class AddFriendComponent {}

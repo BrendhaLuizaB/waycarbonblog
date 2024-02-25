@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { formatMemberSince } from '../../../../waycarbon/src/app/utils/data.utils';
 
 @Component({
   selector: 'app-user-icon',
@@ -12,4 +13,8 @@ export class UserIconComponent {
   @Input() id!: number;
   @Input() image!: string;
   @Input() memberSince!: string;
+
+  formattedMemberSince(timestamp: string): string {
+    return formatMemberSince(timestamp);
+  }
 }

@@ -9,7 +9,7 @@
   />
   <div>
     <h3>{{ data.name }}</h3>
-    <p class="member-since">Membro desde: {{formatTimestamp(selectedUser?.memberSince) }}</p>
+    <p class="member-since">Membro desde: {{formattedMemberSince(selectedUser?.memberSince) }}</p>
   </div>
   <div (click)="toggleFriendship()">
     <ng-container *ngIf="this.users[0].friendIds && this.selectedUser && this.selectedUser.id !== undefined">

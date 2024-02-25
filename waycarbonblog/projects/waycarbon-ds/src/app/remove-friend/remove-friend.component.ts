@@ -7,6 +7,4 @@ import { Component } from '@angular/core';
   templateUrl: './remove-friend.component.html',
   styleUrl: './remove-friend.component.css'
 })
-export class RemoveFriendComponent {
-
-}
+export class RemoveFriendComponent {}
