@@ -24,13 +24,22 @@ import { formatTimestamp } from '../../utils/data.utils';
 export class ComentsComponent implements OnInit {
   @Input() isOpen = false;
   constructor(private dialogRef: MatDialog) {}
+  ngOnInit(): void {}
+
   comments = userPost.comments;
-  ngOnInit(): void {
-    console.log('COMENTARIOS AUTHOR:', this.comments);
-  }
+
 
   formattedTimeStamp(timestamp: string): string {
     return formatTimestamp(timestamp);
+  }
+
+  getResponses(id: number): any[] {
+   const responses = this.comments.filter((item: any) => item.respondsTo?.id === id);
+    return responses;
+  }
+
+  getFilteredComments(): any[] {
+    return this.comments.filter(item => item.respondsTo === null);
   }
 
   openDialog(name: string, id: number) {

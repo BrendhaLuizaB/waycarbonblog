@@ -1,13 +1,26 @@
-
 <div>
   <h1>Comentários</h1>
-  <div class="comment-container" *ngFor="let comment of comments">
-    <div class="user-comment" (click)="openDialog(comment.author.username, comment.id)">
-      <p>{{comment.author.username}} {{ comment.timestamp === '2019-02-20:30Z' ? '' : ' - ' + formattedTimeStamp( comment.timestamp)}}</p>
+  <div
+    class="comment-container"
+    *ngFor="let comment of getFilteredComments()"
+    [attr.key]="'comment' + comment.id"
+  >
+    <div
+      class="user-comment"
+      (click)="openDialog(comment.author.username, comment.id)"
+    >
+      <p>
+        {{ comment.author.username }}
+        {{
+          comment.timestamp === "2019-02-20:30Z"
+            ? ""
+            : " - " + formattedTimeStamp(comment.timestamp)
+        }}
+      </p>
     </div>
     <div class="text-comments">
       <p>
-        {{comment.content}}
+        {{ comment.content }}
       </p>
     </div>
     <div class="components-container">
@@ -15,5 +28,57 @@
       <app-users-comments></app-users-comments>
       <app-report></app-report>
     </div>
+    <div
+      *ngFor="let response of getResponses(comment.id)"
+      class="comment-container"
+      [attr.key]="'response' + response.id"
+    >
+      <div
+        class="user-comment"
+        (click)="openDialog(response.author.username, response.id)"
+      >
+        <p>
+          {{ response.author.username }}
+          {{
+            comment.timestamp === "2019-02-20:30Z"
+              ? ""
+              : " - " + formattedTimeStamp(comment.timestamp)
+          }}
+        </p>
+      </div>
+      <div class="text-comments">
+        <p>{{ response.content }}</p>
+      </div>
+      <div class="components-container">
+        <app-like-btn></app-like-btn>
+        <app-users-comments></app-users-comments>
+        <app-report></app-report>
+      </div>
+      <div
+        *ngFor="let reResponse of getResponses(response.id)"
+        class="comment-container"
+        [attr.key]="'response' + reResponse.id"
+      >
+        <div class="user-comment" (click)="openDialog(reResponse.author.username, reResponse.id)">
+          <p>
+            {{ reResponse.author.username }}
+            {{
+              comment.timestamp === "2019-02-20:30Z"
+                ? ""
+                : " - " + formattedTimeStamp(comment.timestamp)
+            }}
+          </p>
+        </div>
+        <div>
+          <p>{{ reResponse.content }}</p>
+        </div>
+        <div class="components-container">
+          <app-like-btn></app-like-btn>
+          <app-users-comments></app-users-comments>
+          <app-report></app-report>
+        </div>
+      </div>
+    </div>
+    <div></div>
   </div>
 </div>
