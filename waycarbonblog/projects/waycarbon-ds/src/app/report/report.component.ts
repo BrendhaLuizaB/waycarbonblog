@@ -1,12 +1,6 @@
-import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-  MatDialogTitle,
-  MatDialogContent,
-  MatDialogActions,
-  MatDialogClose,
 } from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
@@ -24,7 +18,6 @@ import { ModalReportComponent } from '../modal-report/modal-report.component';
 
 export class ReportComponent {
   @Input() isOpen = false;
-  // @Output() closeModal = new EventEmitter<void>();
   constructor(private dialogRef : MatDialog){}
   
   openDialog(){

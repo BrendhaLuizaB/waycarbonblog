@@ -11,6 +11,10 @@ div {
 
 .user-comment > p{
     color: #017DB5;
+    cursor: pointer;
+}
+.user-comment > p:hover{
+    text-decoration: underline;
 }
 
 .comment-container {

@@ -18,17 +18,12 @@ export class ModalReportComponent {
 
   openSnackBarAndCloseModal(message: string, action: string) {
     this._snackBar.open(message, action, {
-      duration: 2000,
+      duration: 3000,
     });
 
-    // Lógica para fechar o modal aqui (chamada de método, variável de controle, etc.)
       this.dialogRef.closeAll();
-   
   }
 
-  // Método para fechar o modal (substitua isso pela sua lógica real)
   fecharModal() {
-    // Implemente a lógica para fechar o modal aqui
-    console.log('Fechando o modal...');
   }
 }

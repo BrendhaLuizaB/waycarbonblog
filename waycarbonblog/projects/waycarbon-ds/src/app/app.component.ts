@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { UserIconComponent } from './user-icon/user-icon.component';
 import { LikeBTNComponent } from './like-btn/like-btn.component';
 import { ReportComponent } from './report/report.component';
+import { UsersCommentsComponent } from './users-comments/users-comments.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserIconComponent, LikeBTNComponent, ReportComponent],
+  imports: [RouterOutlet, UserIconComponent, LikeBTNComponent, ReportComponent, UsersCommentsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

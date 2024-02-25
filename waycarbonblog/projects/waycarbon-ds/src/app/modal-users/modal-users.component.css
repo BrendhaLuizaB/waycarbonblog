@@ -1,0 +1,45 @@
+div {
+  padding: 1rem 1rem;
+  background-color: #eef1ed;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-modal{
+    padding-bottom: 5rem;
+}
+
+div > img {
+  border-radius: 50%;
+}
+
+div:nth-child(2) {
+  flex-direction: column;
+}
+.subtitle{
+  color: #939393;
+  font-size: 14px;
+}
+
+.friendIds {
+  border: solid 1px #bbbbbb;
+  border-radius: 10px;
+}
+
+.post-card {
+  border: solid 1px #bbbbbb87;
+  border-radius: 8px;
+  width: 26rem;
+  display: flex;
+  margin: 1rem 0.5rem;
+  height: 18rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.member-since{
+  color: #939393;
+}
+

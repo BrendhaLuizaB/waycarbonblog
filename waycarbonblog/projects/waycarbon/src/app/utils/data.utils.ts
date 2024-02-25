@@ -1,4 +1,3 @@
-// date-utils.ts
 export function formatTimestamp(timestamp: string): string {
     const date = new Date(timestamp);
     const options: Intl.DateTimeFormatOptions = {

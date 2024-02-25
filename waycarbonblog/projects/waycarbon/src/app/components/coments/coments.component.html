@@ -1,8 +1,8 @@
 
 <div>
   <h1>Comentários</h1>
-  <div class="comment-container" *ngFor="let comment of comment">
-    <div class="user-comment" >
+  <div class="comment-container" *ngFor="let comment of comments">
+    <div class="user-comment" (click)="openDialog(comment.author.username, comment.id)">
       <p>{{comment.author.username}} {{ comment.timestamp === '2019-02-20:30Z' ? '' : ' - ' + formatTimestamp( comment.timestamp)}}</p>
     </div>
     <div class="text-comments">
@@ -12,9 +12,11 @@
     </div>
     <div class="components-container">
       <app-like-btn></app-like-btn>
+      <app-users-comments></app-users-comments>
       <app-report></app-report>
+      <div>
+        <app-input *ngIf="inputService.showInput"></app-input>
+      </div>
     </div>
-  </div>
-  <div>
   </div>
 </div>

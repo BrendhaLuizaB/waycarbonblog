@@ -1,23 +1,18 @@
-export interface Author {
+export interface Comment {
+  id: number;
+  respondsTo: { id: number } | null;
+  author: {
     id: number;
     username: string;
-  }
-  
-  export interface Comment {
-    replies: any;
-    id: number;
-    respondsTo: number | null;
-    author: Author[];
+  };
+  timestamp: string;
+  content: string;
+  responses: {
+    author: {
+      id: number;
+      username: string;
+    };
     timestamp: string;
     content: string;
-  }
-  
-  export interface Article {
-    id: number;
-    timestamp: string;
-    author: Author[];
-    title: string;
-    subtitle: string;
-    content: string;
-    comments: Comment[];
-  }
+  };
+}

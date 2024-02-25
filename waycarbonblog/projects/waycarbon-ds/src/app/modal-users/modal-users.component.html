@@ -1,0 +1,40 @@
+<div>
+  <div class="container-modal">
+  <img
+    [src]="'/assets/avatar' + selectedUser?.id + '.jpg'"
+    priority
+    width="50"
+    height="50"
+    loading="eager"
+  />
+  <div>
+    <h3>{{ data.name }}</h3>
+    <p class="member-since">Membro desde: {{formatTimestamp(selectedUser?.memberSince) }}</p>
+  </div>
+  <div (click)="toggleFriendship()">
+    <ng-container *ngIf="this.users[0].friendIds && this.selectedUser && this.selectedUser.id !== undefined">
+      <ng-container *ngIf="this.users[0].friendIds.includes(this.selectedUser.id); else addFriendTemplate">
+        <app-remove-friend></app-remove-friend>
+      </ng-container>
+      <ng-template #addFriendTemplate>
+        <app-add-friend></app-add-friend>
+      </ng-template>
+    </ng-container>
+  </div>
+  <div class="friendIds">
+    <p>Amigos em comum: {{ selectedUser?.friendIds?.length }}</p>
+  </div>
+  
+  <div>
+    <app-report></app-report>
+  </div>
+  <app-input></app-input>
+  <div class="container-cards">
+    <div class="post-card" *ngFor="let post of selectedUser?.posts">
+      <h3>{{post.title}}</h3>
+      <p class="subtitle">{{post.subtitle}}</p>
+      <p>{{post.content}}</p>
+    </div>
+  </div>
+</div>
+</div>

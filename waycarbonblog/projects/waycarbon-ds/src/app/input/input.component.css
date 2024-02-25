@@ -1,0 +1,22 @@
+
+input{
+    padding: 0.5rem 1rem;
+    width: 20rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #AAAAAA;
+    outline: 0;
+}
+
+div{
+    display: flex;
+    align-items:flex-end;
+}
+
+div:nth-child(2){
+    border: solid #AAAAAA 1px;
+    border-radius: 4px;
+    padding: 0.2rem 0.2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}

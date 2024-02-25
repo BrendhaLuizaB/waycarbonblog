@@ -1,0 +1,17 @@
+.add-user {
+    border: 1px solid #4c71eb;
+    border-radius: 4px;
+    margin: 0 1rem;
+    cursor: pointer;
+    display: flex;
+    padding: 1rem;
+  }
+  .add-user > p{
+    margin-right: 0.3rem;
+}
+  .add-user:hover {
+    background-color: #4c71eb40;
+  }
+  .add-user > p {
+    color: #4c71eb;
+  }

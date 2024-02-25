@@ -1,0 +1,18 @@
+.remove-friend {
+    border: 1px solid #eb2d2d;
+    border-radius: 4px;
+    margin: 0 1rem;
+    cursor: pointer;
+    display: flex;
+    padding: 1rem;
+  }
+
+    .remove-friend > p{
+        margin-right: 0.3rem;
+    }
+  .remove-friend:hover {
+    background-color: #f11d1d40;
+  }
+  .remove-friend > p {
+    color: #eb2d2d;
+  }
