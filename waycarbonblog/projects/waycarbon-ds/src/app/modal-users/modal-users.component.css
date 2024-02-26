@@ -15,9 +15,11 @@ div > img {
   border-radius: 50%;
 }
 
-div:nth-child(2) {
+.member-data {
   flex-direction: column;
+  align-items: flex-start;
 }
+
 .subtitle{
   color: #939393;
   font-size: 14px;
