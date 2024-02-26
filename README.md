@@ -28,4 +28,3 @@ yarn start
 # or
 ng serve
 ```
-Link para o projeto:
