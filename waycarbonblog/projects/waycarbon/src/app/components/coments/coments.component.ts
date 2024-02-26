@@ -7,6 +7,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { ModalUsersComponent } from '../../../../../waycarbon-ds/src/app/modal-users/modal-users.component';
 import { UsersCommentsComponent } from '../../../../../waycarbon-ds/src/app/users-comments/users-comments.component';
 import { formatTimestamp } from '../../utils/data.utils';
+import { InputComponent } from '../../../../../waycarbon-ds/src/app/input/input.component';
+import { InputService } from '../../services/input.service';
 
 @Component({
   selector: 'app-coments',
@@ -17,17 +19,21 @@ import { formatTimestamp } from '../../utils/data.utils';
     LikeBTNComponent,
     ReportComponent,
     UsersCommentsComponent,
+    InputComponent
   ],
   templateUrl: './coments.component.html',
   styleUrl: './coments.component.css',
 })
 export class ComentsComponent implements OnInit {
   @Input() isOpen = false;
-  constructor(private dialogRef: MatDialog) {}
-  ngOnInit(): void {}
+  constructor(private dialogRef: MatDialog, public inputService: InputService) {}
+
+  ngOnInit(): void {
+    this.inputService.inputValue;
+  }
 
   comments = userPost.comments;
-
+  
 
   formattedTimeStamp(timestamp: string): string {
     return formatTimestamp(timestamp);

@@ -15,7 +15,8 @@ import { FormsModule } from '@angular/forms';
 export class InputComponent {
   constructor(
     public inputService: InputService,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar, 
+    
   ) {}
 
   inputValue:string = '';
@@ -27,6 +28,7 @@ export class InputComponent {
   }
 
   onSubmit() {
+    this.inputService.inputValue = this.inputValue;
     console.log('Valor do input:', this.inputValue);
   }
   sendMessage() {

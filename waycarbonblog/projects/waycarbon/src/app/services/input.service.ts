@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class InputService {
   showInput: boolean = false;
+  inputValue: string = '';
 
   toggleInput() {
     this.showInput = true;
