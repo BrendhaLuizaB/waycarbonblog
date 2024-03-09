@@ -1,5 +1,5 @@
 export interface Comment {
-  id: number;
+  id: number ;
   respondsTo: { id: number } | null;
   author: {
     id: number;
